@@ -1,4 +1,4 @@
-const { credentials } = require('./config')
+const { credentials } = require('./config.js')
 
 // initialize database connection
 const mongoose = require('mongoose')
@@ -76,9 +76,9 @@ Vacation.find((err, vacations) => {
   }).save()
 })
 
-const VacationInSeasonListener = require('./models/vacationInSeasonListener')
-const Attraction = require('./models/attraction')
-const User = require('./models/user')
+const VacationInSeasonListener = require('./models/vacationInSeasonListener.js')
+const Attraction = require('./models/attraction.js')
+const User = require('./models/user.js')
 
 module.exports = {
   getVacations: async (options = {}) => Vacation.find(options),
